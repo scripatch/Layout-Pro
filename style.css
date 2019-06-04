@@ -69,9 +69,6 @@ body {
 
 .browse_btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 87px;
     height: 38px;
     border-radius: 3px 0 0 3px;
@@ -83,6 +80,8 @@ body {
     font-weight: 300;
     box-sizing: border-box;
     line-height: 32px;
+    position: relative;
+    text-align: center;
 }
 
 .browse_btn:hover {
@@ -101,7 +100,7 @@ body {
     border-collapse: collapse;
     box-sizing: border-box;
     padding-left: 16px;
-
+    padding-right: 16px;
 }
 
 .search_text::placeholder {
@@ -134,7 +133,7 @@ body {
 }
 
 .cart_img:hover {
-    filter: invert(0.4);
+    filter: invert(55%) sepia(91%) saturate(426%) hue-rotate(306deg) brightness(92%) contrast(107%);
 }
 
 .account_btn {
@@ -176,7 +175,7 @@ body {
     list-style: none;
 }
 
-.nav_menu li a {
+.nav_menu>li>a {
     padding: 20px 23px;
     display: block;
     text-decoration: none;
@@ -188,9 +187,106 @@ body {
     box-sizing: border-box;
 }
 
-.nav_menu li a:hover {
+/* .nav_menu li a:hover {
     border-bottom: 3px solid #ef5b70;
     ;
+}
+ */
+
+ .cart_block {
+     position:relative;
+ }
+
+ .cart_block:hover .drop_down {
+    display: flex;
+ }
+
+.browse_btn:hover .drop_down {
+    display: flex;
+}
+
+.nav_menu li {
+    position: relative;
+}
+
+.nav_menu>li:hover .drop_down {
+    display: flex;
+}
+
+.drop_down {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    display: none;
+    padding: 12px 20px 12px 20px;
+    text-align: initial;
+    z-index: 12;
+}
+
+.drop_down:before {
+    content: '';
+    display: block;
+    border-left:1px solid #e9e9e9;
+    border-top: 1px solid #e9e9e9;
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -6px;
+    left: 37px;
+    transform: rotate(45deg);
+}
+
+.drop_right {
+    right: 0px;
+}
+.drop_right:before {
+    left:auto;
+    right: 37px;
+}
+
+.drop_down_title {
+    color: #232323;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 8px 0px;
+}
+
+.drop_list {
+    list-style: none;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.drop_down_link {
+    color: #646464;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+    text-decoration: none;
+}
+.drop_down_link:hover {
+    color: #f16d7f;
+}
+
+.drop_down_column {
+    width: 235px;
+    padding-right: 46px;
+}
+
+.drop_down_column>img {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.drop_down_column:last-of-type {
+    padding-right: 4px;
 }
 
 .banner {
