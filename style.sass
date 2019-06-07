@@ -1025,4 +1025,102 @@ p.feedback_personName
 .breadcrumbs_link:hover 
     font-weight: 700
 
+.products_block
+    display: flex
+    margin-top: 60px
 
+.sidebar
+    margin-right: 50px
+
+.sidebar_filter_group_list
+    list-style-type: none
+
+.sidebar_filter_group_item
+    margin-bottom: 18px
+    &:hover .sidebar_filter_list
+        display: block
+    &:hover .sidebar_filter_group_link
+        color: #ef5b70
+        & .sidebar_filter_group_triangleup
+            border-color: transparent transparent #ef5b70 transparent
+            border-width: 0 4.5px 6px 4.5px
+
+.sidebar_filter_group_title
+    border-left: 5px solid #ef5b70
+    height: 37px
+
+
+.sidebar_filter_group_link
+    width: 240px
+    border-bottom: 1px solid #ebebeb
+    padding-left: 11px
+    padding-right: 6px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    height: 100%
+    box-sizing: border-box
+    @extend .flex_jcsb_aic
+
+    
+.sidebar_filter_group_triangleup
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 6px 4.5px 0 4.5px
+    border-color: #6f6e6e transparent transparent transparent
+
+
+.sidebar_filter_list
+    list-style-type: none
+    display: none
+
+.sidebar_filter_item
+    margin-top: 22px
+    margin-left: 16px
+
+.sidebar_filter_item_link
+    height: 11px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 11x
+    text-decoration: none
+    vertical-align: bottom
+    @extend .flex_jcsb_aic
+
+.sidebar_filter_item_link:hover
+    color: #ef5b70
+
+.products_filter
+    display: flex
+    justify-content: space-between
+
+.products_filter_category
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 263px
+    height: 73px
+
+.products_filter_category_name
+    color: #6f6e6e
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+
+.products_filter_category_settings
+    font-size: 13px
+    font-weight: 400
+    color: #dfdfdf
+    line-height: 14px
+    & label
+        color: #6f6e6e
+
+.products_filter_category_link
+    text-decoration: none
+    color: #6f6e6e
+    &:hover
+        color: #ef5b70
