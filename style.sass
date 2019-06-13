@@ -2,6 +2,8 @@
     padding: 0px
     margin: 0px
 
+*:focus, *:active
+    outline: none
 
 body 
     font-family: 'Lato', sans-serif
@@ -1232,7 +1234,7 @@ p.feedback_personName
             color: #ffffff
 
 .like-also
-    margin-top: 120px
+    margin-top: 35px
     margin-bottom: 50px
     &__title
         color: #4d4d4d
@@ -1293,7 +1295,7 @@ p.feedback_personName
         margin-top: 15px
         color: #4d4d4d
         font-size: 18px
-        font-weight: 400
+        font-weight: 900
         text-transform: uppercase
     &__desc
         margin-top: 65px
@@ -1325,29 +1327,31 @@ p.feedback_personName
         width: 100%
         height: 1px
         background-color: #eaeaea
-
-.button
-    position: relative
-    display: inline-block
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-    cursor: pointer
-    border: 1px solid #eaeaea
-    background-color: #fff
-    &__text
-        padding-left: 12px
-        padding-right: 27px
-        color: #bcbcbc
-        font-size: 13px
-        font-weight: 400
-        display: block
-    &__colorbox
-        display: inline-block
-        width: 12px
-        height: 12px
+    &__selection-bar
+        display: flex
+        justify-content: space-between
+        width: 538px
+        margin-top: 60px
+    &__addToCart-button
+        width: 538px
+        margin-top: 28px
+        line-height: 55px
+        border: 1px solid #ef5b70
+        color: #ef5b70
+        font-size: 16px
+        font-weight: 700
+        text-align: center
+        text-decoration: none
+    &__cartimg
+        vertical-align: middle
+        margin-right: 16px
+        filter: invert(69%) sepia(56%) saturate(6691%) hue-rotate(319deg) brightness(99%) contrast(89%)
+    &__addToCart-button:hover
         background-color: #ef5b70
-    &__arrowdown 
+        color: #ffffff
+    &__addToCart-button:hover &__cartimg
+        filter: invert(100%) sepia(0%) saturate(1555%) hue-rotate(28deg) brightness(115%) contrast(100%)
+
 
 .selection
     &__name
@@ -1356,8 +1360,49 @@ p.feedback_personName
         font-weight: 700
         line-height: 24px
         text-transform: uppercase
-    & .button
+        margin-bottom: 10px
+    &__input
         width: 144px
         line-height: 36px
+        position: relative
+        display: inline-block
+        box-sizing: border-box
+        margin: 0
+        padding: 0
+        border: 1px solid #eaeaea
+        background-color: #fff
+        color: #bcbcbc
+        font-size: 13px
+        font-weight: 400
+
+.button
+    cursor: pointer
+    &:hover
+        background-color: #eaeaea
+    &_nohover:hover
+        background-color: #fff
+    &__text
+        padding-left: 12px
+        padding-right: 27px
+        display: block
+        text-align: left
+    & .fa-angle-down
+        position: absolute
+        right: 9px
+        top: 50%
+        margin-top: -6px
+    &_colorbox::before
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        left: 12px
+        width: 12px
+        height: 12px
+        margin-top: -6px
+        background-color: #ef5b70
+    &_colorbox .button__text
+        padding-left: 36px
+
 
 

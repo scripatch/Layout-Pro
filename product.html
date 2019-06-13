@@ -454,14 +454,24 @@
     <div class="product-details__selection-bar">
         <div class="product-details__selection selection">
             <div class="selection__name">Choose color</div>
-            <button class="button" type="button">
-                <div class="button__colorbox"></div>
+            <button class="selection__input button button_colorbox" type="button">
                 <span class="button__text">Red</span>
-
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
             </button>
         </div>
+        <div class="product-details__selection selection">
+            <div class="selection__name">Choose size</div>
+            <button class="selection__input button" type="button">
+                <span class="button__text">XXL</span>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="product-details__selection selection">
+         <div class="selection__name">quantity</div>
+                <input type="text" class="selection__input button__text">
+        </div>
     </div>
-    <a class="product-details__addToCart-button">
+    <a href="#" class="product-details__addToCart-button">
         <img src="img/cart.svg" alt="cart" class="product-details__cartimg">Add to Cart
     </a>
 </div>
